@@ -2,18 +2,18 @@
 using System.Collections;
 
 public class destroybycontract : MonoBehaviour {
-
-	void Start(){
-	}
-	void Update(){
-	}
+	
 	public GameObject explosion;
+	public GameObject playerExplosion;
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.gameObject.tag == "boundary") {
+		if (other.tag == "boundary") {
 			return;
-		} else
-			Instantiate(shot, shotSpawn.transform.position,shotSpawn.transform.rotation);
+		}  
+		Instantiate(explosion, transform.position,transform.rotation);
+		if (other.tag == "player") {
+			Instantiate(playerExplosion, other.transform.position,other.transform.rotation);
+		}
 			Destroy (other.gameObject);
 		Destroy (gameObject);﻿
 	}
