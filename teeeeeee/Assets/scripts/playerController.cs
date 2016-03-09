@@ -46,7 +46,7 @@ public class playerController : MonoBehaviour {
 			//GameObject clone = 
 
 			Instantiate(shot, shotSpawn.transform.position,shotSpawn.transform.rotation);
-			GetComponent<AudioSource>().Play();
+			
 		}
 	}
 }
