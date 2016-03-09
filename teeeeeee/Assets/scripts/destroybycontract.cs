@@ -15,6 +15,6 @@ public class destroybycontract : MonoBehaviour {
 			Instantiate(playerExplosion, other.transform.position,other.transform.rotation);
 		}
 			Destroy (other.gameObject);
-		Destroy (gameObject);﻿
+		Destroy (gameObject);
 	}
 }
