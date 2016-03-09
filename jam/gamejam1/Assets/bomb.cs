@@ -22,7 +22,7 @@ public class bomb : MonoBehaviour {
 			Text.enabled = true;
 			yourcanvas.enabled = true;
 
-				
+			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
 
 
 		}

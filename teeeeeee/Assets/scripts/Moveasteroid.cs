@@ -5,7 +5,7 @@ public class Moveasteroid : MonoBehaviour {
 	public float speed;
 	// Use this for initialization
 	void Start () {
-		GetComponent<Rigidbody>().velocity =transform.up *speed;
+		GetComponent<Rigidbody>().velocity =transform.forward *speed;
 	
 	}
 	
