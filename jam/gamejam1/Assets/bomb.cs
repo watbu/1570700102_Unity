@@ -6,13 +6,18 @@ public class bomb : MonoBehaviour {
 	public GameObject playerExplosion;
 	public GameObject SASASASASAS;
 	public Button Text;
-	public Canvas yourcanvas;
+	public GameObject textButton;
+
 
 	public bool ffafafafafafasf;
 	void Start () 
 	{
+	
 		Text = Text.GetComponent<Button> ();
-		yourcanvas.enabled = false;
+		textButton.SetActive (false);
+
+	
+
 	}
 
 	void OnTriggerEnter (Collider other)
@@ -20,7 +25,7 @@ public class bomb : MonoBehaviour {
 		if (other.tag == "Player") {
 			Destroy (SASASASASAS.gameObject);
 			Text.enabled = true;
-			yourcanvas.enabled = true;
+			textButton.SetActive (true);
 
 			Instantiate(playerExplosion, other.transform.position, other.transform.rotation);
 
